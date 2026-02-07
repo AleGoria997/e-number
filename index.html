@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyfry liczby e</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <!-- Left sidebar with facts -->
+        <aside class="sidebar sidebar-left">
+            <div class="fact-card" id="fact-left-1">
+                <div class="fact-icon">🎂</div>
+                <div class="fact-content">
+                    <h3>Odkrycie</h3>
+                    <p>Liczba e została odkryta przez Jakoba Bernoulliego w 1683 roku podczas badania procentu
+                        składanego.</p>
+                </div>
+            </div>
+            <div class="fact-card" id="fact-left-2">
+                <div class="fact-icon">📏</div>
+                <div class="fact-content">
+                    <h3>Rekord świata</h3>
+                    <p>W 2020 roku obliczono <strong>31.4 biliona</strong> cyfr e!</p>
+                </div>
+            </div>
+            <div class="fact-card" id="fact-left-3">
+                <div class="fact-icon">🧮</div>
+                <div class="fact-content">
+                    <h3>Wzór Eulera</h3>
+                    <p>e<sup>iπ</sup> + 1 = 0 — nazywana najpiękniejszym wzorem matematyki!</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main content -->
+        <div class="container">
+            <div class="card">
+                <div class="header">
+                    <h1>Cyfry liczby <span class="highlight">e</span></h1>
+                    <p class="subtitle">Odkryj tajemnice stałej Eulera</p>
+                </div>
+
+                <div class="e-preview">
+                    <span class="e-value">e = 2.71828182845904523536...</span>
+                </div>
+
+                <div class="input-section">
+                    <label for="digitPosition">Którą cyfrę po przecinku chcesz poznać?</label>
+                    <div class="input-group">
+                        <input type="number" id="digitPosition" min="1" max="1000000" placeholder="np. 67"
+                            autocomplete="off">
+                        <button id="findDigit" onclick="findDigit()">
+                            <span>Znajdź</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.3-4.3"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="result" class="result hidden">
+                    <div class="result-label">Cyfra na pozycji <span id="positionDisplay"></span>:</div>
+                    <div class="result-digit" id="digitDisplay"></div>
+                    <div class="result-context" id="contextDisplay"></div>
+                </div>
+
+                <div class="info-section">
+                    <div class="info-card">
+                        <div class="info-icon">∞</div>
+                        <div class="info-text">
+                            <strong>Liczba niewymierna</strong>
+                            <span>e ma nieskończenie wiele cyfr po przecinku</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">📊</div>
+                        <div class="info-text">
+                            <strong>Dostępne cyfry</strong>
+                            <span>Dostępne: ponad 1 000 000 cyfr!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <p>Stworzone z 💜 dla miłośników matematyki</p>
+            </footer>
+        </div>
+
+        <!-- Right sidebar with facts -->
+        <aside class="sidebar sidebar-right">
+            <div class="fact-card" id="fact-right-1">
+                <div class="fact-icon">🔬</div>
+                <div class="fact-content">
+                    <h3>Nazwa</h3>
+                    <p>Euler użył "e" w 1731 (list do Goldbacha). Spopularyzował w 1748.</p>
+                </div>
+            </div>
+            <div class="fact-card" id="fact-right-2">
+                <div class="fact-icon">💰</div>
+                <div class="fact-content">
+                    <h3>Procent składany</h3>
+                    <p>e to limit (1 + 1/n)<sup>n</sup> gdy n → ∞. Opisuje ciągły wzrost!</p>
+                </div>
+            </div>
+            <div class="fact-card" id="fact-right-3">
+                <div class="fact-icon">🎲</div>
+                <div class="fact-content">
+                    <h3>Prawdopodobieństwo</h3>
+                    <p>Szansa, że losowa permutacja nie ma punktów stałych ≈ 1/e ≈ 37%</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+
+
+    <!-- e-digits.js for local file:// testing, can be removed for production -->
+    <script src="e-digits.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
